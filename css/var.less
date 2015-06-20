@@ -1,0 +1,24 @@
+
+
+//GRID
+
+.col(@divi,@nbr) {
+	width: percentage((1 / @divi) * @nbr);
+	//float: left;
+}
+
+.jump-col(@divi,@nbr){
+	margin-left: percentage((1 / @divi) * @nbr);
+}
+
+// COLORS
+
+@main : rgb(0, 240, 240);
+
+@main-opacity : rgba(255, 255, 255, 0.25);
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 3px, @spread: 0, @color) {
+	-webkit-box-shadow:	@x @y @blur @spread @color;
+	-moz-box-shadow:	@x @y @blur @spread @color;
+	box-shadow:		@x @y @blur @spread @color;
+}

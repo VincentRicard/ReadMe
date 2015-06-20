@@ -1,0 +1,19 @@
+{{> header}}
+    <section>
+
+        {{#each collections.commits}}
+            <article>
+                <time>{{ this.date }}</time>
+                <h2>{{ this.title }}</h2>
+                {{{ this.contents }}}
+
+                <div class="img-container">
+                {{#each this.images}}
+                	<img src=commits/{{this}}>
+                {{/each}}
+            	</div>
+            </article>
+        {{/each}}
+
+    </section>
+{{> footer}}

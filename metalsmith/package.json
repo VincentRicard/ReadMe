@@ -1,0 +1,25 @@
+{
+  "name": "ReadMe",
+  "version": "",
+  "private": true,
+  "description": "clean",
+  "author": "Vincent Ricard",
+  "license": "",
+  "scripts": {
+    "build": "node index.js",
+    "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:leClub/leClub.github.io.git\" master --force && rm -rf .git"
+  },
+  "dependencies": {
+    "bullhorn-handlebars-helpers": "latest",
+    "handlebars": "latest",
+    "highlight.js": "latest",
+    "metalsmith": "latest",
+    "metalsmith-collections": "latest",
+    "metalsmith-markdown": "latest",
+    "metalsmith-permalinks": "latest",
+    "metalsmith-less": "latest",
+    "metalsmith-templates": "latest",
+    "metalsmith-watch": "latest",
+    "metalsmith-imagemin": "^1.1.0"
+  }
+}
