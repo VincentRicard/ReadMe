@@ -18,7 +18,9 @@
 
 // COLORS
 
-@main : rgb(100, 240, 240);
+@pre : rgb(100, 240, 240);
+
+
 
 .drop-shadow (@x: 0, @y: 1px, @blur: 3px, @spread: 0, @color) {
 	-webkit-box-shadow:	@x @y @blur @spread @color;
@@ -85,7 +87,7 @@
 
 
 // nombre d'articles
-@nb_articles:20;
+@nb_articles:25;
 @height_page:@nb_articles*600px;
 
 html {
@@ -124,14 +126,14 @@ h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
     margin: 0 0 1rem 0;
-    color: @main;
+    color: @pre;
 }
 
 time {
-	color: @main;
+	color: @pre;
 	font-family: @bold;
 	font-weight: normal;
-	border-bottom: @main 1px solid;
+	border-bottom: @pre 1px solid;
 }
 
 h2 {
@@ -146,10 +148,10 @@ p {
 }
 
 a {
-	color: @main;
+	color: @pre;
 	text-decoration: none;
 	&:hover,&:active {
-		border-bottom: 1px solid @main;
+		border-bottom: 1px solid @pre;
 	}
 
 }
@@ -174,8 +176,8 @@ article {
 	img {
 		.col(4,2);
 		float: left;
-		// .drop-shadow(@x: 2px, @y: 4px, @blur: 0, @spread: 0, @color:@main);
-		border: 3px solid @main;
+		// .drop-shadow(@x: 2px, @y: 4px, @blur: 0, @spread: 0, @color:@pre);
+		border: 3px solid @pre;
 		padding: 2%;
 
 		&:last-child {
@@ -243,12 +245,12 @@ section {
 	height: @height_page;
 	div {
 		.col(5,1);
-		border-left:1px solid @main;
+		border-left:1px solid @pre;
 		height: 100%;
 		min-height: 500px;
 		float: left;
 		&:last-child {
-			border-right: 1px solid @main;
+			border-right: 1px solid @pre;
 		}
 	}
 
